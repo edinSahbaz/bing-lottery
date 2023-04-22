@@ -1,5 +1,3 @@
-#
-
 ## Task
 
 ![image](https://user-images.githubusercontent.com/47791892/233772151-ec8d2971-16da-4055-b0b1-2f707b2c6f04.png)
@@ -18,3 +16,12 @@ Jedan set dobitnih brojeva i LOTO 6/39 treba generisati (nasumično) i odštampa
 U igri LOTO 6/39 postoji osam vrsta dobitaka, koje se utvrđuju na temelju izvučene dobitne kombinacije pojedinog kola.
 
 [Privremeni izvještaj](https://www.lutrijabih.ba/igre/loto-639/privremeni-izvjestaj/)
+
+## Assignments
+* Azra Daut - 
+* Belmin Hadrović - 
+* Bilal Smailhodžić - 
+* Din Šahović - 
+* Edin Canović - 
+* Edin Šahbaz - 
+* Faris Muminović - 
