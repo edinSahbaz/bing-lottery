@@ -18,10 +18,14 @@ U igri LOTO 6/39 postoji osam vrsta dobitaka, koje se utvrđuju na temelju izvu�
 [Privremeni izvještaj](https://www.lutrijabih.ba/igre/loto-639/privremeni-izvjestaj/)
 
 ## Assignments
-* Azra Daut - 
-* Belmin Hadrović - 
-* Bilal Smailhodžić - 
-* Din Šahović - 
-* Edin Canović - 
-* Edin Šahbaz - 
-* Faris Muminović - 
+
+Organizacija:
+* Edin Šahbaz - Organizacija, formiranje zadataka, kreiranje inicijalnog koda(klase, metode i pozivi metoda).
+
+Kodiranje:
+* Azra Daut - ISSUE X
+* Belmin Hadrović - ISSUE X
+* Bilal Smailhodžić - ISSUE X
+* Din Šahović - ISSUE X
+* Edin Canović - ISSUE X
+* Faris Muminović - ISSUE X
