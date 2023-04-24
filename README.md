@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/47791892/233772151-ec8d2971-16da-4055-b0b1-2f707b2c6f04.png)
 
-## Proučite pravila LOTO 6/39 Lutrija Bosne i Hercegovine.
+Proučite [pravila LOTO 6/39](https://www.lutrijabih.ba/igre/loto-639/?title=loto-639) Lutrija Bosne i Hercegovine.
 Kreirajte program u C# koji simulira LOTO 6/39 lutriju prema tekstu.
 
 Molimo formatirajte sav svoj kod prema ovom vodiču za stil:
