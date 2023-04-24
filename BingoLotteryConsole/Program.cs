@@ -1,4 +1,5 @@
 ﻿namespace BingoLotteryConsole;
+
 class Program
 {
     static void Main(string[] args)
@@ -26,7 +27,7 @@ class Program
 
     static void Dio2()
     {
-        // Generisanje pobjedničke kombinacije
+        // Generisanje pobjedničke kombinacije i dopunskog broja
         var dobitnaKombinacija = Generisanje.GenerisiKombinaciju();
         var dopunskiBroj = Generisanje.GenerisiDopunskiBroj(dobitnaKombinacija);
 
