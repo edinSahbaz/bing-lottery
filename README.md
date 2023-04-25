@@ -23,9 +23,12 @@ Organizacija:
 * Edin Šahbaz - Organizacija, formiranje zadataka, kreiranje inicijalnog koda(klase, metode i pozivi metoda).
 
 Kodiranje:
-* Edin Canović - ISSUE #1 - [Generisanje kombinacije](https://github.com/edinSahbaz/bingo-lottery/issues/1)
-* Azra Daut - ISSUE X
-* Belmin Hadrović - ISSUE X
-* Bilal Smailhodžić - ISSUE X
-* Din Šahović - ISSUE X
-* Faris Muminović - ISSUE X
+
+| Član tima | Issue | Zadatak | 
+| --- | --- | --- | 
+| Edin Canović | #1 | [Generisanje kombinacije](https://github.com/edinSahbaz/bingo-lottery/issues/1) |
+| Azra Daut | #2 | [Generisanje dopunskog broja](https://github.com/edinSahbaz/bingo-lottery/issues/2) |
+| Faris Muminović | #3 | [Generisanje listica](https://github.com/edinSahbaz/bingo-lottery/issues/3) |
+| Din Šahović | #4 | [Spremanje listica u txt fajl](https://github.com/edinSahbaz/bingo-lottery/issues/4) |
+| Belmin Hadrović | #5 | [Citanje kombinacija iz txt fajla](https://github.com/edinSahbaz/bingo-lottery/issues/5) |
+| Edin Šahbaz | #6 | [Generisanje izvjestaja](https://github.com/edinSahbaz/bingo-lottery/issues/6) |
