@@ -23,9 +23,9 @@ Organizacija:
 * Edin Šahbaz - Organizacija, formiranje zadataka, kreiranje inicijalnog koda(klase, metode i pozivi metoda).
 
 Kodiranje:
+* Edin Canović - ISSUE #1 - [Generisanje kombinacije](https://github.com/edinSahbaz/bingo-lottery/issues/1)
 * Azra Daut - ISSUE X
 * Belmin Hadrović - ISSUE X
 * Bilal Smailhodžić - ISSUE X
 * Din Šahović - ISSUE X
-* Edin Canović - ISSUE X
 * Faris Muminović - ISSUE X
