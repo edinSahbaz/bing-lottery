@@ -16,12 +16,29 @@ public static class Generisanje
     }
 
     // ISSUE #2
+
+    // Implementirati logiku za generisanje dopunskog broja u opsegu izmedju 1 i 39.
+    // NAPOMENA: Dopunski broj ne smije biti dio generisane pobjednicke kombinacije.
     public static int GenerisiDopunskiBroj(int[] kombinacija)
     {
         int dopunskiBroj = 0;
+        Random random = new Random();
+        bool duplikat = false;
 
-        // Implementirati logiku za generisanje dopunskog broja u opsegu izmedju 1 i 39.
-        // NAPOMENA: Dopunski broj ne smije biti dio generisane pobjednicke kombinacije.
+        do
+        {
+            dopunskiBroj = random.Next(1, 40);
+
+            duplikat = false;
+            for (int i = 0; i < kombinacija.Length; i++)
+            {
+                if (dopunskiBroj == kombinacija[i])
+                {
+                    duplikat = true;
+                    break;
+                }
+            }
+        } while (duplikat);
 
         return dopunskiBroj;
     }
