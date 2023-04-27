@@ -5,12 +5,27 @@ namespace BingoLotteryConsole;
 public static class Generisanje
 {
     // ISSUE #1
+
+    // Implementirati logiku za generisanje 6 random brojeva u opsegu izmedju 1 i 39.
+    // Generisanu kombinaciju sortirati od najmanjeg do najveceg broja.
     public static int[] GenerisiKombinaciju()
     {
         int[] kombinacija = new int[6];
+        Random random = new Random();
 
-        // Implementirati logiku za generisanje 6 random brojeva u opsegu izmedju 1 i 39.
-        // Generisanu kombinaciju sortirati od najmanjeg do najveceg broja.
+        for (int i = 0; i < 6; i++)
+        {
+            int broj;
+
+            do
+            {
+                broj = random.Next(1, 40);
+            } while (Array.IndexOf(kombinacija, broj) != -1);
+
+            kombinacija[i] = broj;
+        }
+
+        Array.Sort(kombinacija);
 
         return kombinacija;
     }
