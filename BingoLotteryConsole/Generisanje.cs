@@ -89,7 +89,6 @@ public static class Generisanje
                 for (int j = 0; j < listic.Length; j++)
                 {
                     writer.Write(listic[j]);
-                    Console.Write(listic[j]);
 
                     if (j != listic.Length - 1)
                     {
