@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 
 namespace BingoLotteryConsole;
 
@@ -71,16 +73,35 @@ public static class Generisanje
     // ISSUE #4
     public static void SpremiListiceUTxtFile(List<int[]> listici)
     {
-        // Implementirati logiku za spremanje listica u txt fajl.
-        // Spremati kombinacije na sljedeći način jednu ispod druge, razdvajajući listiće linijom:
+        
+        using (StreamWriter writer = new StreamWriter("listici.txt"))
+        {
+            for (int i = 0; i < listici.Count; i++)
+            {
+                int[] listic = listici[i];
+                writer.Write($"Listic br. {i + 1}: ");
 
-        // Listic br. X: 1, 9, 15, 21, 28, 35, 39
-        // --------------------------------------------------
-        // Listic br. X: 5, 11, 14, 25, 29, 31, 36
-        // --------------------------------------------------
+                // Sortiranje brojeva u listiću od najmanjeg do najvećeg
+                int[] sortedListic = listic.OrderBy(x => x).ToArray();
 
-        // Gdje X predstavlja poziciju listica u listi povećanu za 1 zbog 0-based indeksiranja.
-        // (Nulti element -> 1. element)
+                // Pisanje sortiranih brojeva u datoteku
+                for (int j = 0; j < sortedListic.Length; j++)
+                {
+                    writer.Write(sortedListic[j]);
+
+                    if (j != sortedListic.Length - 1)
+                    {
+                    writer.Write(", ");
+                    }
+                }
+
+                writer.WriteLine();
+                writer.WriteLine("--------------------------------------------------");
+            }
+        }
+    }
+
+
     }
 }
 
