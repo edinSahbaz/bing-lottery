@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BingoLotteryConsole;
 
 public static class Generisanje
 {
     // ISSUE #1
-
     // Implementirati logiku za generisanje 6 random brojeva u opsegu izmedju 1 i 39.
     // Generisanu kombinaciju sortirati od najmanjeg do najveceg broja.
     public static int[] GenerisiKombinaciju()
@@ -33,7 +33,6 @@ public static class Generisanje
     }
 
     // ISSUE #2
-
     // Implementirati logiku za generisanje dopunskog broja u opsegu izmedju 1 i 39.
     // NAPOMENA: Dopunski broj ne smije biti dio generisane pobjednicke kombinacije.
     public static int GenerisiDopunskiBroj(int[] kombinacija)
@@ -61,19 +60,24 @@ public static class Generisanje
     }
 
     // ISSUE #3
+    // Implementirati logiku za generisanje n listica (koristiti generisi kombinaciju funkciju).
     public static List<int[]> GenerisiListice(int brojListica)
     {
         List<int[]> listici = new List<int[]>();
 
-        // Implementirati logiku za generisanje n listica (koristiti generisi kombinaciju funkciju).
+        for (int i = 0; i < brojListica; i++)
+        {
+            int[] kombinacija = GenerisiKombinaciju();
+            listici.Add(kombinacija);
+        }
 
         return listici;
     }
 
     // ISSUE #4
+    // Implementirati logiku za spremanje listica u txt fajl.
     public static void SpremiListiceUTxtFile(List<int[]> listici)
     {
-        
         using (StreamWriter writer = new StreamWriter("listici.txt"))
         {
             for (int i = 0; i < listici.Count; i++)
@@ -81,27 +85,22 @@ public static class Generisanje
                 int[] listic = listici[i];
                 writer.Write($"Listic br. {i + 1}: ");
 
-                // Sortiranje brojeva u listiću od najmanjeg do najvećeg
-                int[] sortedListic = listic.OrderBy(x => x).ToArray();
-
                 // Pisanje sortiranih brojeva u datoteku
-                for (int j = 0; j < sortedListic.Length; j++)
+                for (int j = 0; j < listic.Length; j++)
                 {
-                    writer.Write(sortedListic[j]);
+                    writer.Write(listic[j]);
+                    Console.Write(listic[j]);
 
-                    if (j != sortedListic.Length - 1)
+                    if (j != listic.Length - 1)
                     {
-                    writer.Write(", ");
+                        writer.Write(", ");
                     }
                 }
 
                 writer.WriteLine();
-                writer.WriteLine("--------------------------------------------------");
+                writer.WriteLine("-------------------------------------------");
             }
         }
-    }
-
-
     }
 }
 
