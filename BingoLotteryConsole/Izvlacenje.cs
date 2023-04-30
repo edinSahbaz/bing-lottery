@@ -6,26 +6,34 @@ public static class Izvlacenje
 {
     // ISSUE # 5
    public static List<int[]> ProcitajTxtFajl()
-{
-    List<int[]> listici = new List<int[]>();
+   {
+        List<int[]> listici = new List<int[]>();
 
-    // Otvaranje txt datoteke i čitanje linija teksta
-    string[] linije = File.ReadAllLines("listici.txt");
+        // Otvaranje txt datoteke i čitanje linija teksta
+        string[] linije = File.ReadAllLines("listici.txt");
 
-    // Parsiranje brojeva za svaki listić
-    foreach (string linija in linije)
-    {
-        int[] brojevi = Array.ConvertAll(linija.Split(','), int.Parse);
-
-        // Provjera da li se na listiću nalazi tačno 6 brojeva
-        if (brojevi.Length == 6)
+        // Parsiranje brojeva za svaki listić
+        foreach (string linija in linije)
         {
-            listici.Add(brojevi);
-        }
-    }
+            if (!linija.Contains("Listic"))
+            {
+                continue;
+            }
 
-    return listici;
-}
+            var pozicijaKaraktera = linija.IndexOf(':');
+
+            var linijaBrojeva = linija.Substring(pozicijaKaraktera + 2);
+            int[] brojevi = Array.ConvertAll(linijaBrojeva.Split(','), int.Parse);
+
+            //// Provjera da li se na listiću nalazi tačno 6 brojeva
+            if (brojevi.Length == 6)
+            {
+                listici.Add(brojevi);
+            }
+        }
+
+        return listici;
+    }
 
 
     // ISSUE # 6
