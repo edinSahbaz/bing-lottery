@@ -5,14 +5,28 @@ namespace BingoLotteryConsole;
 public static class Izvlacenje
 {
     // ISSUE # 5
-    public static List<int[]> ProcitajTxtFajl()
+   public static List<int[]> ProcitajTxtFajl()
+{
+    List<int[]> listici = new List<int[]>();
+
+    // Otvaranje txt datoteke i čitanje linija teksta
+    string[] linije = File.ReadAllLines("listici.txt");
+
+    // Parsiranje brojeva za svaki listić
+    foreach (string linija in linije)
     {
-        List<int[]> listici = new List<int[]>();
+        int[] brojevi = Array.ConvertAll(linija.Split(','), int.Parse);
 
-        // Implementirati logiku za citanje listica iz txt fajla.
-
-        return listici;
+        // Provjera da li se na listiću nalazi tačno 6 brojeva
+        if (brojevi.Length == 6)
+        {
+            listici.Add(brojevi);
+        }
     }
+
+    return listici;
+}
+
 
     // ISSUE # 6
     // Implementirati logiku za generisanje izvjestaja o dobitnim kombinacijama.
