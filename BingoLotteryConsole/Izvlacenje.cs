@@ -25,7 +25,7 @@ public static class Izvlacenje
             var linijaBrojeva = linija.Substring(pozicijaKaraktera + 2);
             int[] brojevi = Array.ConvertAll(linijaBrojeva.Split(','), int.Parse);
 
-            //// Provjera da li se na listiću nalazi tačno 6 brojeva
+            // Provjera da li se na listiću nalazi tačno 6 brojeva
             if (brojevi.Length == 6)
             {
                 listici.Add(brojevi);
@@ -35,10 +35,8 @@ public static class Izvlacenje
         return listici;
     }
 
-
     // ISSUE # 6
-    // Implementirati logiku za generisanje izvjestaja o dobitnim kombinacijama.
-    // Za referencu pogledati tabelu na linku: https://www.lutrijabih.ba/igre/loto-639/privremeni-izvjestaj/
+    // https://www.lutrijabih.ba/igre/loto-639/privremeni-izvjestaj/
     public static void GenerisiIzvjestaj(List<int[]> listici, int[] dobitnaKombinacija, int dopunskiBroj)
     {
         // Dobitne kombinacje predstavljenje kao key value parovi
